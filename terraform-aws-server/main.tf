@@ -1,11 +1,9 @@
 variable ami {}
 variable subnet_id {}
-variable vpc_security_group_ids {
-  type = list
-}
+variable vpc_security_group_ids {type = list}
 variable identity {}
 variable web_count {}
-
+}
 resource "aws_instance" "web" {
   ami                    = var.ami
   instance_type          = "t2.micro"
